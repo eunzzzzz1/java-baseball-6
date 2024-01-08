@@ -1,9 +1,23 @@
 ## 구현 기능 목록
 
+### 프로그래밍 요구 사항
+1. JDK 17 확인할 것
+2. 프로그램 실행의 시작점은 `main()`
+3. 프로그램 종료 시 `System.exit()` 호출하지 말 것
+4. `camp.nextstep.edu.missionutils`에서 제공하는 `Randoms` 및 `Console` API를 사용
+   ```java
+     List<Integer> computer = new ArrayList<>();
+     while (computer.size() < 3) {
+        int randomNumber = Randoms.pickNumberInRange(1, 9);
+        if (!computer.contains(randomNumber)) {
+            computer.add(randomNumber);
+        }
+     }
+
+
+### 기능 요구사항
 0. 시작문구 : `"숫자 야구 게임을 시작합니다."`
-
-
-1. **1~9 까지의 랜덤한 세 자리수 생성**
+1. **1~9 까지의 _서로 다른_ 랜덤한 세 자리수 생성**
    - `camp.nextstep.edu.missionutils`에서 제공하는 Randoms 및 Console API를 사용하여 구현
    - 랜덤 값 추출 : `camp.nextstep.edu.missionutils.Randoms`의 `pickNumberInRange()`를 활용
    - 사용자 입력 값 : `camp.nextstep.edu.missionutils.Console`의 `readLine()`을 활용
